@@ -1,15 +1,18 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import { players } from "./players";
 
-export default function PlayerShotPage() {
+export default function SoccerShotMap() {
   const { id } = useParams();
-  const player = players.find((p) => p.pos === parseInt(id));
+  const player = players.find((p) => p.pos === parseInt(id, 10));
 
   if (!player) return <p className="text-white p-6">Player not found</p>;
 
   return (
     <div className="min-h-screen bg-black text-white p-6">
-      <h1 className="text-2xl font-bold mb-4">Shot Analysis for Player #{id}</h1>
+      <h1 className="text-2xl font-bold mb-4">
+        Shot Analysis for Player #{id}
+      </h1>
 
       {/* Shot Type Filter */}
       <div className="bg-slate-800 p-4 rounded mb-4 max-w-sm">
@@ -25,7 +28,9 @@ export default function PlayerShotPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Shot Stats Table */}
         <div className="bg-gray-900 p-4 rounded h-auto">
-          <h3 className="text-white text-sm font-semibold mb-2">Shot Stats</h3>
+          <h3 className="text-white text-sm font-semibold mb-2">
+            Shot Stats
+          </h3>
           <table className="w-full text-sm text-left text-white">
             <thead>
               <tr className="border-b border-gray-700">
@@ -70,7 +75,9 @@ export default function PlayerShotPage() {
 
         {/* Set Piece Map Image */}
         <div className="bg-gray-900 p-4 rounded">
-          <h3 className="text-white text-sm font-semibold mb-2">Shot Map</h3>
+          <h3 className="text-white text-sm font-semibold mb-2">
+            Shot Map
+          </h3>
           <img
             src={player.goalMapImg}
             alt={`Set piece map for ${player.name}`}

@@ -1,0 +1,63 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { players } from "./players";
+
+export default function TopScorersChart() {
+  return (
+    <div className="w-full px-6 py-10 bg-gradient-to-br from-slate-900 to-black text-white rounded-xl shadow-xl relative">
+
+      {/* Title block inside bar area, top-right */}
+      <div className="absolute top-4 right-6 text-right max-w-[250px]">
+        <h2 className="text-3xl font-extrabold uppercase leading-tight mb-1">
+          Top Scorers<br />Liga MX 2024
+        </h2>
+        <p className="text-sm text-gray-300">
+          Players ranked by total goals scored this season. The vertical bars create a visual flag pattern for added style.
+        </p>
+      </div>
+
+      {/* Bars Section */}
+      <div className="flex justify-center items-end gap-[1px] min-h-[360px]">
+        {players.map((entry) => (
+          <Link to={`/player/${entry.pos}`} key={entry.pos} className="group">
+            <div className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+              {/* Player Image */}
+              <img
+                src={entry.img}
+                alt={entry.name}
+                className="w-10 h-10 mb-1 rounded-full object-cover"
+              />
+
+              {/* Bar */}
+              <div
+                className="w-[8px] rounded-t transition-all duration-500 bg-no-repeat bg-cover"
+                style={{
+                  height: `${entry.goals * 18}px`,
+                  backgroundImage: "url('/flag.jpeg')",
+                  backgroundPosition: `${(entry.pos - 1) / players.length * 100}% center`,
+                  backgroundSize: `${players.length * 100}% 100%`,
+                  backgroundClip: "content-box",
+                  WebkitBackgroundClip: "content-box",
+                }}
+              ></div>
+
+              {/* Info */}
+              <div className="w-[70px] text-center text-xs mt-1">
+                <div className="font-semibold">{entry.pos}. {entry.name}</div>
+                <div className="text-gray-300">{entry.team}</div>
+                <div className="text-green-400 font-bold">{entry.goals} G</div>
+              </div>
+
+              {/* Team Logo */}
+              <img
+                src={entry.logo}
+                alt={`${entry.team} logo`}
+                className="w-6 h-6 mt-1 rounded-full object-cover"
+              />
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}

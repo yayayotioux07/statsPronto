@@ -63,7 +63,7 @@ export default function TopScorersChart() {
         Paulinho of Toluca leads the Liga MX 2025 scoring chart with 14 goals, standing out as the league’s most prolific striker. He’s followed closely by Raúl Zúñiga (Club Tijuana) and Alexis Vega (Toluca), who both netted 12 goals, showcasing Toluca’s strong offensive presence. Diber Cambindo (Necaxa) secured 5th place with 11 goals, helping elevate Necaxa’s attacking profile. The race was tight among mid-table scorers, with Salomón Rondón and Germán Berterame each scoring 10 goals for Pachuca and Monterrey, respectively. John Kennedy (Pachuca) added 9 goals, while Jhonder Cádiz (León) and José Paradela (Necaxa) rounded out the top 10 with 8 goals each.
 
         <br /><br />
-        📊 These rankings reflect total goals scored during the 2024 season. The vertical bars in the graphic offer a stylized visual inspired by national flag colors.
+        📊 These rankings reflect total goals scored during the 2025 season. The vertical bars in the graphic offer a stylized visual inspired by national flag colors.
       </div>
     </div>
   );

@@ -9,11 +9,14 @@ export default function TopScorersChart() {
       {/* Title block inside bar area, top-right */}
       <div className="absolute top-4 right-6 text-right max-w-[250px]">
         <h2 className="text-3xl font-extrabold uppercase leading-tight mb-1">
-          Top Scorers<br />Liga MX 2024
+          Top Scorers<br />Clausura Liga MX 2025
         </h2>
-        <p className="text-sm text-gray-300">
-          Players ranked by total goals scored this season. The vertical bars create a visual flag pattern for added style.
-        </p>
+      {/*
+  <p className="text-sm text-gray-300">
+    Players ranked by total goals scored this season. The vertical bars create a visual flag pattern for added style.
+  </p>
+*/}
+
       </div>
 
       {/* Bars Section */}
@@ -57,7 +60,7 @@ export default function TopScorersChart() {
 
       {/* 🔽 Full Summary Text Section */}
       <div className="mt-8 text-center text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        Paulinho of Toluca leads the Liga MX 2024 scoring chart with 14 goals, standing out as the league’s most prolific striker. He’s followed closely by Raúl Zúñiga (Club Tijuana) and Alexis Vega (Toluca), who both netted 12 goals, showcasing Toluca’s strong offensive presence. Diber Cambindo (Necaxa) secured 5th place with 11 goals, helping elevate Necaxa’s attacking profile. The race was tight among mid-table scorers, with Salomón Rondón and Germán Berterame each scoring 10 goals for Pachuca and Monterrey, respectively. John Kennedy (Pachuca) added 9 goals, while Jhonder Cádiz (León) and José Paradela (Necaxa) rounded out the top 10 with 8 goals each.
+        Paulinho of Toluca leads the Liga MX 2025 scoring chart with 14 goals, standing out as the league’s most prolific striker. He’s followed closely by Raúl Zúñiga (Club Tijuana) and Alexis Vega (Toluca), who both netted 12 goals, showcasing Toluca’s strong offensive presence. Diber Cambindo (Necaxa) secured 5th place with 11 goals, helping elevate Necaxa’s attacking profile. The race was tight among mid-table scorers, with Salomón Rondón and Germán Berterame each scoring 10 goals for Pachuca and Monterrey, respectively. John Kennedy (Pachuca) added 9 goals, while Jhonder Cádiz (León) and José Paradela (Necaxa) rounded out the top 10 with 8 goals each.
 
         <br /><br />
         📊 These rankings reflect total goals scored during the 2024 season. The vertical bars in the graphic offer a stylized visual inspired by national flag colors.

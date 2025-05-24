@@ -1,3 +1,7 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { players } from "./players"; // Adjust path if players.js is elsewhere
+
 export default function TopScorersChart() {
   return (
     <div className="w-full px-6 py-10 bg-gradient-to-br from-slate-900 to-black text-white rounded-xl shadow-xl relative">
